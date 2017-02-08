@@ -1,16 +1,9 @@
 # docker
 
+```bash
 curl -sSL https://raw.githubusercontent.com/kriscn/docker/master/init/docker.init.sh | sh
-
-停止所有容器命令:
-```bash
-docker stop `docker ps -a -q`
 ```
 
-删除所有容器命令:
-```bash
-docker rm `docker ps -a -q`
-```
 修改配置文件（/etc/sysconfig/docker）
 
 ```
@@ -25,4 +18,16 @@ systemctl restart docker
 安装dockerui
 ```
 docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock uifd/ui-for-docker
+```
+
+#其他
+
+停止所有容器命令:
+```bash
+docker stop `docker ps -a -q`
+```
+
+删除所有容器命令:
+```bash
+docker rm `docker ps -a -q`
 ```

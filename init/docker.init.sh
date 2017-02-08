@@ -15,7 +15,4 @@ chmod +x /usr/local/bin/docker-compose
 curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://1f4b4a2f.m.daocloud.io
 systemctl start docker.service
 
-#安装dockerui
-docker run -d -p 9000:9000 -v /var/run/docker.sock:/docker.sock microbox/dockerui:latest
-
 systemctl status docker | grep active

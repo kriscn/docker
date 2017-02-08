@@ -22,3 +22,7 @@ OPTIONS='--selinux-enabled --log-driver=journald --signature-verification=false 
 ```
 systemctl restart docker
 ```
+安装dockerui
+```
+docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock uifd/ui-for-docker
+```

@@ -17,3 +17,8 @@ docker rm `docker ps -a -q`
 OPTIONS='--selinux-enabled --log-driver=journald --signature-verification=false -H 0.0.0.0:2375 -H unix:///run/docker.sock'
 ```
 追加 -H 0.0.0.0:2375 -H unix:///run/docker.sock
+
+重启
+```
+systemctl restart docker
+```

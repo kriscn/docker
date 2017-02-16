@@ -1,7 +1,7 @@
 #!/bin/bash
 yum -y install vim wget ntpdate lrzsz git net-tools
 ntpdate time.nist.gov
-echo "1 1 * * * /usr/sbin/ntpdate time.nist.gov" >> /var/spool/cron/root
+echo "1 * * * * /usr/sbin/ntpdate time.nist.gov" >> /var/spool/cron/root
 
 systemctl stop firewalld
 systemctl disable firewalld

@@ -3,6 +3,10 @@ yum -y install vim wget ntpdate lrzsz git net-tools
 ntpdate time.nist.gov
 echo "*/1 * * * * /usr/sbin/ntpdate time.nist.gov" >> /var/spool/cron/root
 
+#关闭selinux
+/usr/sbin/setenforce 0
+echo "/usr/sbin/setenforce 0" >> /etc/rc.local
+
 systemctl stop firewalld
 systemctl disable firewalld
 yum -y install iptables-services
